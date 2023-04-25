@@ -106,6 +106,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/img/fullidlecropleft.png":
+/*!**************************************!*\
+  !*** ./src/img/fullidlecropleft.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "23399bb6ef41d4b8e30e117f24804369.png");
+
+/***/ }),
+
 /***/ "./src/img/fullrunright.png":
 /*!**********************************!*\
   !*** ./src/img/fullrunright.png ***!
@@ -133,21 +148,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "56c384cfd6a87e95bf2f6fc44bb1c949.png");
-
-/***/ }),
-
-/***/ "./src/img/idlecropleft.png":
-/*!**********************************!*\
-  !*** ./src/img/idlecropleft.png ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "1004447d0138cbe21f5935ff4961d7b5.png");
 
 /***/ }),
 
@@ -827,7 +827,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_cloudbackground_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../img/cloudbackground.png */ "./src/img/cloudbackground.png");
 /* harmony import */ var _img_backgroundforest_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../img/backgroundforest.png */ "./src/img/backgroundforest.png");
 /* harmony import */ var _img_fullidlecrop_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../img/fullidlecrop.png */ "./src/img/fullidlecrop.png");
-/* harmony import */ var _img_idlecropleft_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../img/idlecropleft.png */ "./src/img/idlecropleft.png");
+/* harmony import */ var _img_fullidlecropleft_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../img/fullidlecropleft.png */ "./src/img/fullidlecropleft.png");
 /* harmony import */ var _img_fullrunright_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../img/fullrunright.png */ "./src/img/fullrunright.png");
 /* harmony import */ var _img_Runcropleftheight_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../img/Runcropleftheight.png */ "./src/img/Runcropleftheight.png");
 
@@ -908,7 +908,7 @@ var Player = /*#__PURE__*/function () {
     this.sprites = {
       stand: {
         right: createImage(_img_fullidlecrop_png__WEBPACK_IMPORTED_MODULE_12__["default"]),
-        left: createImage(_img_idlecropleft_png__WEBPACK_IMPORTED_MODULE_13__["default"]),
+        left: createImage(_img_fullidlecropleft_png__WEBPACK_IMPORTED_MODULE_13__["default"]),
         cropWidth: 46
       },
       run: {

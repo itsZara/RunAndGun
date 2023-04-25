@@ -9,10 +9,10 @@ import clouds from '../img/cloudbackground.png'
 import backgroundForest from '../img/backgroundforest.png'
 import platformSmallTall from '../img/grass.png'
 import spriteIdle from '../img/fullidlecrop.png'
-import spriteIdleleft from '../img/idlecropleft.png'
+import spriteIdleleft from '../img/fullidlecropleft.png'
 import spriteRun from '../img/fullrunright.png'
 import spriteRunLeft from '../img/Runcropleftheight.png'
-import zombieIdle from '../img/Runcropleftheight.png'
+import sprintLeft from '../img/Runcropleftheight.png'
     const canvas = document.querySelector('canvas')
     const c = canvas.getContext('2d')
 
@@ -83,7 +83,7 @@ import zombieIdle from '../img/Runcropleftheight.png'
                 },
                 run: {
                     right: createImage(spriteRun),
-                    left: createImage(zombieIdle),
+                    left: createImage(sprintLeft),
                     cropWidth: 37
 
                 }
@@ -176,7 +176,7 @@ import zombieIdle from '../img/Runcropleftheight.png'
             console.log(position.x)
             this.width = 45
             this.height = 80
-            this.image = createImage(zombieIdle)
+            this.image = createImage(sprintLeft)
             this.frames =0
         }
         
