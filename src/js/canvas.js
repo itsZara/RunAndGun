@@ -13,6 +13,7 @@ import spriteIdleleft from '../img/fullidlecropleft.png'
 import spriteRun from '../img/fullrunright.png'
 import spriteRunLeft from '../img/Runcropleftheight.png'
 import sprintLeft from '../img/Runcropleftheight.png'
+import sprintLeft from '../img/bomb.png'
     const canvas = document.querySelector('canvas')
     const c = canvas.getContext('2d')
 
@@ -357,11 +358,61 @@ async function init(){
         }),
         new Enemy({
             position : {
-                x: 1900,
+                x: 3900,
                 y: 100
             },
             velocity: {
                 x: -0.3,
+                y: 0
+            }
+        }),
+        new Enemy({
+            position : {
+                x: 4900,
+                y: 100
+            },
+            velocity: {
+                x: -0.3,
+                y: 0
+            }
+        }),
+        new Enemy({
+            position : {
+                x: 5900,
+                y: 100
+            },
+            velocity: {
+                x: -0.3,
+                y: 0
+            }
+        }),
+        new Enemy({
+            position : {
+                x: 2900,
+                y: 100
+            },
+            velocity: {
+                x: -0.1,
+                y: 0
+            }
+        }), 
+        new Enemy({
+            position : {
+                x: 1900,
+                y: 100
+            },
+            velocity: {
+                x: -0.1,
+                y: 0
+            }
+        }), 
+        new Enemy({
+            position : {
+                x: 3000,
+                y: 100
+            },
+            velocity: {
+                x: -0.1,
                 y: 0
             }
         })
@@ -373,11 +424,22 @@ async function init(){
     }), 
     
     new Platform({x: platformImage.width *4 +250 +platformImage.width - platformSmallTallImage.width ,y :400, image: createImage(platformSmallTall)}),
+    new Platform({x: platformImage.width *5 +250 +platformImage.width - platformSmallTallImage.width ,y :400, image: createImage(platformSmallTall)}),
     new Platform({x: platformImage.width -3 ,y :520, image: platformImage}),
     new Platform({x: platformImage.width *2 +100 ,y :520, image: platformImage}),
     new Platform({x: platformImage.width *3 +100 ,y :520, image: platformImage}),
     new Platform({x: platformImage.width *4 +200 ,y :520, image: platformImage}),
     new Platform({x: platformImage.width *6 +200 ,y :520, image: platformImage})
+    ,
+    new Platform({x: platformImage.width *7 +200 ,y :320, image: platformImage})
+    ,
+    new Platform({x: platformImage.width *8 +250 ,y :220, image: platformImage})
+    ,
+    new Platform({x: platformImage.width *9 +300 ,y :120, image: platformImage})
+    ,
+    new Platform({x: platformImage.width *10 +350 ,y :20, image: platformImage})
+    ,
+    new Platform({x: platformImage.width *11 +400 ,y :520, image: platformImage})
 ]    
 
       genericObjects = [
@@ -447,8 +509,9 @@ async function init(){
               player.position.y < obstacle.position.y + obstacle.height &&
               player.position.y + player.height > obstacle.position.y
             ) {
-              // collision detected, end the game
+             
               init()
+            
             }
           
             obstacle.update()
@@ -603,13 +666,13 @@ async function init(){
     
 
     //win scenario
-    if(scrollOffset > 2000) {
+    if(scrollOffset > 6000) {
         console.log('you win')
         c.font = "30px Arial"
         c.fillStyle = 'red'
         c.textAlign = 'center'
-        c.fillText("HELLOWADJNASDJN",100,100)
-        
+        c.fillText("YOU WIN",500,500)
+        // setTimeout(init, 5000)
         
     }
 
