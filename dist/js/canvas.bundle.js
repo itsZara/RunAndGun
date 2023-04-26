@@ -942,9 +942,8 @@ var Player = /*#__PURE__*/function () {
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Player, [{
     key: "draw",
     value: function draw() {
-      c.drawImage(this.currentSprite, 128 * this.frames, 0, 46, 66, this.position.x, this.position.y, this.width, this.height);
-      c.strokeStyle = 'red';
-      c.strokeRect(player.position.x, player.position.y, player.width, player.height);
+      c.drawImage(this.currentSprite, 128 * this.frames, 0, 46, 66, this.position.x, this.position.y, this.width, this.height); // c.strokeStyle = 'red';
+      // c.strokeRect(player.position.x, player.position.y, player.width,player.height)
     }
   }, {
     key: "update",
@@ -1159,7 +1158,7 @@ function generateObstacle() {
     },
     width: 30,
     height: 30,
-    color: 'red'
+    color: 'green'
   });
   obstacles.push(obstacle);
 }
@@ -1432,7 +1431,7 @@ function animate() {
     enemy.update(); //kill  enemy on bullet hit
 
     bullets.forEach(function (bullet, bulletIndex) {
-      if (bullet.position.x >= enemy.position.x && bullet.position.y >= enemy.position.y && bullet.position.x <= enemy.position.x + enemy.width && bullet.position.x <= enemy.position.x + enemy.height) {
+      if (bullet.position.x >= enemy.position.x && bullet.position.y >= enemy.position.y && bullet.position.x <= enemy.position.x + enemy.width && bullet.position.x <= enemy.position.x + enemy.height && bullet.position.y <= enemy.position.y + enemy.height) {
         enemies.splice(index, 1);
         bullets.splice(bulletIndex, 1);
         bulletActive = null;

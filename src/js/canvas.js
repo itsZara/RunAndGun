@@ -100,8 +100,8 @@ import bomb from '../img/bomb.png'
             c.drawImage(this.currentSprite,128 * this.frames,0,46,66, 
                 this.position.x, this.position.y, this.width, this.height)
             
-            c.strokeStyle = 'red';
-            c.strokeRect(player.position.x, player.position.y, player.width,player.height)
+            // c.strokeStyle = 'red';
+            // c.strokeRect(player.position.x, player.position.y, player.width,player.height)
 
         }
 
@@ -274,7 +274,7 @@ import bomb from '../img/bomb.png'
           },
           width: 30,
           height: 30,
-          color: 'red'
+          color: 'green'
         })
       
         obstacles.push(obstacle)
@@ -532,7 +532,8 @@ async function init(){
                 if (bullet.position.x >= enemy.position.x  &&
                     bullet.position.y >= enemy.position.y &&
                     bullet.position.x <= enemy.position.x + enemy.width &&
-                    bullet.position.x <= enemy.position.x + enemy.height  
+                    bullet.position.x <= enemy.position.x + enemy.height   &&
+                    bullet.position.y <= enemy.position.y + enemy.height  
                     ){ 
                         enemies.splice(index, 1)
                         bullets.splice(bulletIndex, 1)
