@@ -13,7 +13,7 @@ import spriteIdleleft from '../img/fullidlecropleft.png'
 import spriteRun from '../img/fullrunright.png'
 import spriteRunLeft from '../img/Runcropleftheight.png'
 import sprintLeft from '../img/Runcropleftheight.png'
-import sprintLeft from '../img/bomb.png'
+import bomb from '../img/bomb.png'
     const canvas = document.querySelector('canvas')
     const c = canvas.getContext('2d')
 
